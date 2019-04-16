@@ -7,12 +7,9 @@ require_relative 'lib/player'
 require_relative 'lib/game'
 
 
-# Maintenant c'est open bar pour tester ton application. Tous les fichiers importants sont chargés
-# Tu peux faire User.new, Event.new, binding.pry, User.all, etc.
-# 
-
-
-
+### Debut JEU / CREATION / JOUEURS
+##
+#
 
 def game_creation_joueurs
 	puts " > Bienvenue dans Mortal Combat, THP mode.
@@ -26,6 +23,14 @@ def game_creation_joueurs
 	@player2 = Player.new("#{@name2}")
 end
 
+#
+##
+### Fin JEU / CREATION / JOUEURS
+
+### Debut JEU / INTRO
+##
+#
+
 def game_intro
 	puts "\n\nLes deux combattants vont à présent entrer dans la cage !!\n
 	Mesdames & Messieurs !!! \n\nJ'ai l'immense honneur de vous présenter ...... #{@name1} !!!
@@ -37,14 +42,28 @@ puts " \n\nEt son adversaire de ce soir, à ce jour invaincu dans la ligue: \nMo
 Il est connu et redouté par ses adversaires à cause de la taille de ses narines !!\n"
 end
 
+#
+##
+### Fin JEU / INTRO
+
+### Debut JEU / LANCEMENT / COMBAT
+##
+#
 
 def game_lancement_combat
 	puts "\n Voici l'état des joueurs :\n\n "
 	puts "#{@player1.display_stats}\n #{@player2.display_stats}"
 	puts "\n\n Press Enter pour démarrer le combat !!"
 	gets.chomp
-	
 end
+
+#
+##
+### Fin JEU / LANCEMENT / COMBAT
+
+### Debut JEU / COMBAT
+##
+#
 
 def game_combat
 	
@@ -58,7 +77,6 @@ def game_combat
 		@player2.attacks(@player1)
 		@player2.life_points
 		
-
 	end
 	
 	if @player1.life_points <= 0
@@ -71,6 +89,14 @@ def game_combat
 	gets.chomp
 end
 
+#
+##
+### Fin JEU / COMBAT
+
+### Debut PERFORM
+##
+#
+
 def perform
 	game_creation_joueurs
 	game_intro
@@ -81,6 +107,17 @@ end
 
 
 perform
+
+#
+##
+### Fin PERFORM
+
+
+
+
+
+
+
 
 
 
