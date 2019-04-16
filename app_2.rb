@@ -70,7 +70,7 @@ end
 #
 
 def game_combat
-	
+# DEBUT BOUCLE
 	while @player1.life_points > 0
 
 		puts "\n ---------------\nVoici votre statut #{@name1}:" 
@@ -112,6 +112,7 @@ def game_combat
 	break if (@bot1.life_points <= 0 && @bot2.life_points <= 0)
 	
 	end
+# FIN BOUCLE
 	
 	if @player1.life_points <= 0
 		puts "\n\n YOU LOSE (espèce de grosse merde) !!!\n\n Victoire écrasante du duo des Nympo !!\n"
